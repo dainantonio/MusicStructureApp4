@@ -2,7 +2,9 @@ package com.example.therussells.musicstructureapp4;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -29,23 +31,24 @@ public class GenreActivity extends AppCompatActivity {
         musictype.add("Reggae");
         musictype.add("Rock");
 
+        // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
+        // adapter knows how to create layouts for each item in the list, using the
+        // simple_list_item_1.xml layout resource defined in the Android framework.
+        // This list item layout contains a single {@link TextView}, which the adapter will set to
+        // display a single word.
+        ArrayAdapter<String> itemsAdapter =
+                new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, musictype);
 
-        // Find the genre view so we can add child views (list of songs) to it
-        LinearLayout genreActivity = findViewById(R.id.genreId);
+        // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
+        // There should be a {@link ListView} with the view ID called list, which is declared in the
+        // activity_numbers.xml layout file.
+        ListView listView = (ListView) findViewById(R.id.list);
 
-        // variable to keep track of the current index position
-        // Will keep looping until the end of the list at index 12. as long as the index is less than the leght of the list
-        // Increment the index variable by 1
-        for (int index = 0; index < musictype.size(); index++){
-            TextView genrelistView = new TextView(this);
-
-            // Set the text to be song at the current index
-            genrelistView.setText(musictype.get(index));
-
-            // Add this TextView as another child to the genre view of this layout
-            genreActivity.addView(genrelistView);
-
-        }
+        // Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
+        // {@link ListView} will display list items for each word in the list of words.
+        // Do this by calling the setAdapter method on the {@link ListView} object and pass in
+        // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
+        listView.setAdapter(itemsAdapter);
 
     }
 }
