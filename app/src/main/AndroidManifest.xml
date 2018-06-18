@@ -5,12 +5,12 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:fullBackupContent="@xml/backup_descriptor"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -19,10 +19,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GenreActivity" />
-        <activity android:name=".ArtistActivity" />
-        <activity android:name=".AlbumActivity" />
-        <activity android:name=".PlaylistActivity"/>
+        <activity android:name=".GenreActivity"
+            android:label="@string/genre"/>
+        <activity android:name=".ArtistActivity"
+            android:label="@string/artist"/>
+        <activity android:name=".AlbumActivity"
+            android:label="@string/album"/>
+        <activity android:name=".PlaylistActivity"
+            android:label="@string/playlist"/>
+        <activity android:name=".FavoriteSongsActivity"
+            android:label="Favorites"/>
     </application>
 
 </manifest>

@@ -17,10 +17,28 @@
         android:src="@drawable/musicimage2" />
 
     <TextView
+        android:id="@+id/favoritelist"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="25dp"
+        android:text="@string/favorite_songs"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/playlist"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/playlist"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
         android:id="@+id/genre"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="25dp"
         android:layout_weight="1"
         android:text="@string/genre"
         android:textSize="24sp"
@@ -44,13 +62,5 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/playlist"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="@string/playlist"
-        android:textSize="24sp"
-        android:textStyle="bold" />
 
 </LinearLayout>

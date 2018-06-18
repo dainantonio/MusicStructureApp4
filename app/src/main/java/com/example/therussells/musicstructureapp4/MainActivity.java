@@ -17,6 +17,23 @@ public class MainActivity extends AppCompatActivity {
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
+        // This will locate the favorite songs activity by the view id
+        TextView favorite = findViewById(R.id.favoritelist);
+
+        //the favorite textview will have a OnClicklistener on it
+        favorite.setOnClickListener (new View.OnClickListener(){
+
+            //Method onClick is called when user clicks the TextView and code executed
+            @Override
+            public void onClick(View v) {
+
+                // Explicit intent that calls to open genreactivity
+                Intent favoriteIntent = new Intent(MainActivity.this, GenreActivity.class);
+                // Start the new activity
+                startActivity(favoriteIntent);
+            }
+        });
+
         // This will locate the genre activity by the view id
         TextView genre = findViewById(R.id.genre);
 

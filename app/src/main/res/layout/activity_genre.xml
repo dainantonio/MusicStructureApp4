@@ -6,6 +6,6 @@
     android:layout_margin="25dp"
     android:orientation="vertical"
     tools:context=".GenreActivity"
-    android:id="@+id/genreView">
+    android:id="@+id/genreId">
 
 </LinearLayout>
