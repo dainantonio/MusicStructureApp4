@@ -2,12 +2,7 @@ package com.example.therussells.musicstructureapp4;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.view.ViewGroup;
-
 import java.util.ArrayList;
 
 public class PlaylistActivity extends AppCompatActivity {
@@ -15,7 +10,7 @@ public class PlaylistActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_playlist);
+        setContentView(R.layout.song_list);
 
 
         // Create an ArrayList of Songs;
@@ -46,7 +41,7 @@ public class PlaylistActivity extends AppCompatActivity {
         ListView listView = findViewById(R.id.list);
 
         // Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
-        // {@link ListView} will display list items for each word in the list of words.
+        // {@link ListView} will display list items for each song name in the list of songs.
         // Do this by calling the setAdapter method on the {@link ListView} object and pass in
         // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
         listView.setAdapter(adapter);

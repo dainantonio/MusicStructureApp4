@@ -34,6 +34,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // This will locate the playlist activity by the view id
+        TextView playlist = findViewById(R.id.playlist);
+
+        //the playlist textview will have a OnClicklistener on it
+        playlist.setOnClickListener(new View.OnClickListener(){
+
+            //Method onClick is called when user clicks the TextView and code executed
+            @Override
+            public void onClick(View v) {
+
+                // Explicit intent that calls to open playlistactivity
+                Intent playlistIntent = new Intent(MainActivity.this, PlaylistActivity.class);
+                // Start the new activity
+                startActivity(playlistIntent);
+            }
+        });
+
         // This will locate the genre activity by the view id
         TextView genre = findViewById(R.id.genre);
 
@@ -85,21 +102,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // This will locate the playlist activity by the view id
-        TextView playlist = findViewById(R.id.playlist);
-
-        //the playlist textview will have a OnClicklistener on it
-        playlist.setOnClickListener(new View.OnClickListener(){
-
-            //Method onClick is called when user clicks the TextView and code executed
-            @Override
-            public void onClick(View v) {
-
-                // Explicit intent that calls to open playlistactivity
-                Intent playlistIntent = new Intent(MainActivity.this, PlaylistActivity.class);
-                // Start the new activity
-                startActivity(playlistIntent);
-            }
-        });
     }}
 
