@@ -6,6 +6,7 @@ import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
@@ -18,37 +19,37 @@ public class PlaylistActivity extends AppCompatActivity {
 
 
         // Create an ArrayList of Songs;
-        ArrayList<String> playlist = new ArrayList<>();
-        playlist.add("Black is beautiful");
-        playlist.add("Christina");
-        playlist.add("Country Bwoy");
-        playlist.add("Ghetto Paradise");
-        playlist.add("I know love");
-        playlist.add("Legend");
-        playlist.add("Lonliness");
-        playlist.add("Selassie Children");
-        playlist.add("Skankin Sweet");
-        playlist.add("Spanish Town Rockin' ");
-        playlist.add("Tell me");
+        ArrayList<Songs> song = new ArrayList<>();
+        song.add(new Songs("Black is beautiful", "Chronix"));
+        song.add(new Songs("Christina", "Chronix"));
+        song.add(new Songs("Country Bwoy", "Chronix"));
+        song.add(new Songs("Ghetto Paradise", "Chronix"));
+        song.add(new Songs("I know love", "Chronix"));
+        song.add(new Songs("Legend", "Chronix"));
+        song.add(new Songs("Lonliness", "Chronix"));
+        song.add(new Songs("Selassie Children", "Chronix"));
+        song.add(new Songs("Skankin Sweet", "Chronix"));
+        song.add(new Songs("Spanish Town Rockin' ", "Chronix"));
+        song.add(new Songs("Tell me", "Chronix"));
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
         // adapter knows how to create layouts for each item in the list, using the
-        // simple_list_item_1.xml layout resource defined in the Android framework.
+        // list_item_xml layout resource defined in the Android framework.
         // This list item layout contains a single {@link TextView}, which the adapter will set to
         // display a single word.
-        ArrayAdapter<String> itemsAdapter =
-                new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, playlist);
+        SongsAdapter adapter= new SongsAdapter(this, song);
+
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
         // activity_numbers.xml layout file.
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
 
         // Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
         // {@link ListView} will display list items for each word in the list of words.
         // Do this by calling the setAdapter method on the {@link ListView} object and pass in
         // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
-        listView.setAdapter(itemsAdapter);
+        listView.setAdapter(adapter);
         }
 
     }

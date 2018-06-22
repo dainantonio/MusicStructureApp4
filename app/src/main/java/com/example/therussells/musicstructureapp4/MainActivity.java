@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 // Explicit intent that calls to open genreactivity
-                Intent favoriteIntent = new Intent(MainActivity.this, GenreActivity.class);
+                Intent favoriteIntent = new Intent(MainActivity.this, FavoriteSongsActivity.class);
                 // Start the new activity
                 startActivity(favoriteIntent);
             }
