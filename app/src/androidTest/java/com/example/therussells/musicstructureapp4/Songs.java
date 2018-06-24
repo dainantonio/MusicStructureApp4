@@ -1,13 +1,13 @@
 package com.example.therussells.musicstructureapp4;
 
     //Custom class
-    public class Songs {
+    class Songs {
 
     //Song Names
-    private String mSongName;
+    private final String mSongName;
 
     //Artist Name
-    private String mArtistName;
+    private final String mArtistName;
 
     //new Songs Object created
     public Songs(String songName, String artistName) {

@@ -1,19 +1,19 @@
 package com.example.therussells.musicstructureapp4;
 
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.content.Context;
-import java.util.List;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+
 import java.util.ArrayList;
 
 //class declaration to specify that the SongsAdapter extends or inherits behavior from the ArrayAdapter class.
-public class SongsAdapter extends ArrayAdapter<Songs>{
+//Adapter will map song info to listView
+class SongsAdapter extends ArrayAdapter<Songs>{
     SongsAdapter(PlaylistActivity playlistActivity, ArrayList<Songs> song) {
         super(playlistActivity, 0,song);
     }
@@ -24,6 +24,7 @@ public class SongsAdapter extends ArrayAdapter<Songs>{
 
         View listItemView = convertView;
         if(listItemView == null) {
+            //The inflator is used to map the song name and artist name to the TextView in the
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item_xml, parent, false);
         }
         //Get Songs object located at this position in the list

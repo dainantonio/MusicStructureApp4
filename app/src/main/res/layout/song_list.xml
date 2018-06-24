@@ -1,10 +1,23 @@
-<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/list"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="16dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:paddingTop="16dp" />
+    android:paddingTop="16dp"
+    tools:context=".PlaylistActivity">
+
+   <!-- This list will present the list of songs and artist names-->
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+    </LinearLayout>

@@ -15,17 +15,17 @@ public class PlaylistActivity extends AppCompatActivity {
 
         // Create an ArrayList of Songs;
         ArrayList<Songs> song = new ArrayList<>();
-        song.add(new Songs("Black is beautiful", "Chronix"));
-        song.add(new Songs("Christina", "Chronix"));
-        song.add(new Songs("Country Bwoy", "Chronix"));
-        song.add(new Songs("Ghetto Paradise", "Chronix"));
-        song.add(new Songs("I know love", "Chronix"));
-        song.add(new Songs("Legend", "Chronix"));
-        song.add(new Songs("Lonliness", "Chronix"));
-        song.add(new Songs("Selassie Children", "Chronix"));
-        song.add(new Songs("Skankin Sweet", "Chronix"));
-        song.add(new Songs("Spanish Town Rockin' ", "Chronix"));
-        song.add(new Songs("Tell me", "Chronix"));
+        song.add(new Songs("Black is beautiful"));
+        song.add(new Songs("Christina"));
+        song.add(new Songs("Country Bwoy"));
+        song.add(new Songs("Ghetto Paradise"));
+        song.add(new Songs("I know love"));
+        song.add(new Songs("Legend"));
+        song.add(new Songs("Lonliness"));
+        song.add(new Songs("Selassie Children"));
+        song.add(new Songs("Skankin Sweet"));
+        song.add(new Songs("Spanish Town Rockin' "));
+        song.add(new Songs("Tell me"));
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
         // adapter knows how to create layouts for each item in the list, using the
@@ -37,7 +37,7 @@ public class PlaylistActivity extends AppCompatActivity {
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
-        // activity_numbers.xml layout file.
+        // activity_playlist.xml layout file.
         ListView listView = findViewById(R.id.list);
 
         // Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
