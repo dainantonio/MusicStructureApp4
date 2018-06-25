@@ -4,6 +4,11 @@
     <string name="artist">Artist</string>
     <string name="album">Album</string>
     <string name="playlist">Playlist</string>
-    <string name="favorite_songs">Favorite Songs</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="main_screen">Main Screen</string>
+    <string name="album_art">Album Art</string>
+    <string name="pause">pause</string>
+    <string name="next">next</string>
+    <string name="back">back</string>
 
 </resources>

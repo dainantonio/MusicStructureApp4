@@ -17,22 +17,23 @@ public class MainActivity extends AppCompatActivity {
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
-        // This will locate the favorite songs activity by the view id
-        TextView favorite = findViewById(R.id.favoritelist);
+        // This will locate the now playing songs activity by the view id
+        TextView nowPlaying = findViewById(R.id.nowPlaying);
 
-        //the favorite textview will have a OnClicklistener on it
-        favorite.setOnClickListener (new View.OnClickListener(){
+        //the now playing textview will have a OnClicklistener on it
+       nowPlaying.setOnClickListener (new View.OnClickListener(){
 
             //Method onClick is called when user clicks the TextView and code executed
             @Override
             public void onClick(View v) {
 
-                // Explicit intent that calls to open genreactivity
-                Intent favoriteIntent = new Intent(MainActivity.this, FavoriteSongsActivity.class);
+                // Explicit intent that calls to open now playing activity
+                Intent nowplayingIntent = new Intent(MainActivity.this, NowPlayingActivity.class);
                 // Start the new activity
-                startActivity(favoriteIntent);
+                startActivity(nowplayingIntent);
             }
         });
+
 
         // This will locate the playlist activity by the view id
         TextView playlist = findViewById(R.id.playlist);

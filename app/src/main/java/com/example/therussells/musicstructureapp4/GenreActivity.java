@@ -11,7 +11,7 @@ public class GenreActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_genre);
+        setContentView(R.layout.songs_list);
 
         // Create an ArrayList of Genres;
         ArrayList<String> musictype = new ArrayList<>();

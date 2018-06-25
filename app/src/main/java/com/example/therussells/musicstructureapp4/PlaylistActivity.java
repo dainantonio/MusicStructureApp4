@@ -3,6 +3,7 @@ package com.example.therussells.musicstructureapp4;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
+
 import java.util.ArrayList;
 
 public class PlaylistActivity extends AppCompatActivity {
@@ -10,7 +11,8 @@ public class PlaylistActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.song_list);
+        setContentView(R.layout.songs_list);
+
 
 
         // Create an ArrayList of Songs;
